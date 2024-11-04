@@ -7,6 +7,8 @@ document.getElementById("btn-donate-for-noakhali").addEventListener("click", fun
     const updatedCollection = donateAmount + previousCollection;
     const inputFiledLength = document.getElementById("donate-amount-for-noakhali");
     const length = inputFiledLength.value.length;
+    const title1 = document.getElementById("title-1").innerText;
+    const now = new Date()
     if (donateAmount > myPreviousBalance || isNaN(donateAmount) || donateAmount < 0 || length < 0) {
         alert("Wrong")
         return
@@ -15,7 +17,16 @@ document.getElementById("btn-donate-for-noakhali").addEventListener("click", fun
     else {
         document.getElementById("total-collection-for-noakhali").innerText = updatedCollection;
         document.getElementById("my-balance").innerText = myNewBalance;
+        // History
 
+        const h1 = document.createElement("h1");
+        const p = document.createElement("p");
+
+        h1.innerText = `${donateAmount} Taka is Donated for ${title1}`
+        h1.classList.add("text-2xl")
+        document.getElementById("history-container").appendChild(h1)
+        p.innerText = `${now}`
+        document.getElementById("history-container").appendChild(p)
         document.getElementById("donate-amount-for-noakhali").value = ""
 
     }
@@ -37,6 +48,8 @@ document.getElementById("btn-donate-for-feni").addEventListener("click", functio
     const updatedCollection = donateAmount + previousCollection;
     const inputFiledLength = document.getElementById("donate-amount-for-feni");
     const length = inputFiledLength.value.length;
+    const title2 = document.getElementById("title-2").innerText;
+    const now = new Date()
     if (donateAmount > myPreviousBalance || isNaN(donateAmount) || donateAmount < 0 || length < 0) {
         alert("Wrong")
         return
@@ -45,6 +58,14 @@ document.getElementById("btn-donate-for-feni").addEventListener("click", functio
     else {
         document.getElementById("total-collection-for-feni").innerText = updatedCollection;
         document.getElementById("my-balance").innerText = myNewBalance;
+        const h1 = document.createElement("h1");
+        const p = document.createElement("p");
+
+        h1.innerText = `${donateAmount} Taka is Donated for ${title2}`
+        h1.classList.add("text-2xl")
+        document.getElementById("history-container").appendChild(h1)
+        p.innerText = `${now}`
+        document.getElementById("history-container").appendChild(p)
         document.getElementById("donate-amount-for-feni").value = ""
 
 
@@ -67,6 +88,8 @@ document.getElementById("btn-donate-for-quota").addEventListener("click", functi
     const updatedCollection = donateAmount + previousCollection;
     const inputFiledLength = document.getElementById("donate-amount-for-quota");
     const length = inputFiledLength.value.length;
+    const title3 = document.getElementById("title-3").innerText;
+    const now = new Date()
     if (donateAmount > myPreviousBalance || isNaN(donateAmount) || donateAmount < 0 || length < 0) {
         alert("WronG")
         return
@@ -75,6 +98,14 @@ document.getElementById("btn-donate-for-quota").addEventListener("click", functi
     else {
         document.getElementById("total-collection-for-quota").innerText = updatedCollection;
         document.getElementById("my-balance").innerText = myNewBalance;
+        const h1 = document.createElement("h1");
+        const p = document.createElement("p");
+
+        h1.innerText = `${donateAmount} Taka is Donated for ${title3}`
+        h1.classList.add("text-2xl")
+        document.getElementById("history-container").appendChild(h1)
+        p.innerText = `${now}`
+        document.getElementById("history-container").appendChild(p)
         document.getElementById("donate-amount-for-quota").value = ""
 
     }

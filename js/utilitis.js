@@ -14,3 +14,13 @@ const getTextValue = function(id){
   const textValueNumber = parseFloat(textValue);
   return textValueNumber;
 }
+
+// Toggole Button
+
+function showSectionById(id){
+  
+  document.getElementById("history-section").classList.add("hidden"); 
+  document.getElementById("donate-section").classList.add("hidden");
+  document.getElementById(id).classList.remove("hidden")
+}
+
