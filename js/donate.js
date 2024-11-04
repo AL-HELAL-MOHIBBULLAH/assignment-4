@@ -10,7 +10,7 @@ document.getElementById("btn-donate-for-noakhali").addEventListener("click", fun
     const title1 = document.getElementById("title-1").innerText;
     const now = new Date()
     if (donateAmount > myPreviousBalance || isNaN(donateAmount) || donateAmount < 0 || length < 0) {
-        alert("Wrong")
+        alert("Invalid Donation Amount")
         return
     }
 
@@ -51,7 +51,7 @@ document.getElementById("btn-donate-for-feni").addEventListener("click", functio
     const title2 = document.getElementById("title-2").innerText;
     const now = new Date()
     if (donateAmount > myPreviousBalance || isNaN(donateAmount) || donateAmount < 0 || length < 0) {
-        alert("Wrong")
+        alert("Invalid Donation Amount")
         return
     }
 
@@ -91,7 +91,7 @@ document.getElementById("btn-donate-for-quota").addEventListener("click", functi
     const title3 = document.getElementById("title-3").innerText;
     const now = new Date()
     if (donateAmount > myPreviousBalance || isNaN(donateAmount) || donateAmount < 0 || length < 0) {
-        alert("WronG")
+        alert("Invalid Donation Amount")
         return
     }
 
